@@ -6,18 +6,18 @@ import siteMetadata from '@/data/siteMetadata';
 const navigation = {
   general: [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' }
+    { name: 'About', href: '/#' },
+    { name: 'Projects', href: '/#' },
+    { name: 'Blog', href: '/#' }
   ],
   specifics: [
     // { name: 'Activity', href: '/activity' },
-    { name: 'Stats', href: '/stats' },
-    { name: 'Toolbox', href: '/toolbox' }
+    { name: 'Stats', href: '/#' },
+    { name: 'Toolbox', href: '/#' }
   ],
   extra: [
-    { name: 'Meet up', href: '/meetup' }
-    // { name: 'Books', href: '/books' }
+    { name: 'Meet up', href: '/#' }
+    // { name: 'Books', href: '/#' }
   ],
   social: [
     {

@@ -12,7 +12,7 @@ const siteMetadata = {
     'https://res.cloudinary.com/dq6a7lv2s/image/upload/v1674404146/WcPmyWNE_400x400_frwbkc.jpg',
   socialBanner:
     'https://res.cloudinary.com/braydoncoyer/image/upload/v1638884997/default-social-image.png',
-  email: 'mailto:braydon@coyer.net',
+  email: 'mailto:kevowino2016@gmail.com',
   github: 'https://github.com/bro-codez',
   twitter: 'https://twitter.com/kevowino_dev',
   twitterHandle: '@kevowino_dev',
