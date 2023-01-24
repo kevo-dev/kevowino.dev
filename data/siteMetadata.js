@@ -18,7 +18,7 @@ const siteMetadata = {
   twitterHandle: '@kevowino_dev',
   codepen: 'https://codepen.io/kevOWINO',
   linkedin: 'https://www.linkedin.com/in/kevin-owino-55b095262/',
-  newsletter: 'https://www.getrevue.co/profile/braydoncoyer',
+  newsletter: '/#',
   resume: '/static/braydoncoyer_resume.pdf',
   snippets:
     'https://www.notion.so/9f35162787e0448094188b66304cf9f6?v=1b9c4e146edf46148fe7b1c5346cbea4',
