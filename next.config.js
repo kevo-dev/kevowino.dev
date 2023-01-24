@@ -30,6 +30,6 @@ module.exports = {
     ]
   },
   experimental: {
-    newNextLinkBehavior: false,
+    newNextLinkBehavior: false
   }
 };
