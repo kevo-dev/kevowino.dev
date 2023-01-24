@@ -16,8 +16,8 @@ const siteMetadata = {
   github: 'https://github.com/bro-codez',
   twitter: 'https://twitter.com/kevowino_dev',
   twitterHandle: '@kevowino_dev',
-  codepen: 'https://codepen.io/braydoncoyer',
-  linkedin: 'https://www.linkedin.com/in/braydon-coyer/',
+  codepen: 'https://codepen.io/kevOWINO',
+  linkedin: 'https://www.linkedin.com/in/kevin-owino-55b095262/',
   newsletter: 'https://www.getrevue.co/profile/braydoncoyer',
   resume: '/static/braydoncoyer_resume.pdf',
   snippets:
