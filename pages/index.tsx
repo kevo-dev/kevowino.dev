@@ -21,7 +21,7 @@ export default function Home({ recentArticles }) {
             <h1 className="order-2 col-span-5 text-4xl leading-tight md:leading-normal md:order-1 sm:text-5xl">
               I'm{' '}
               <span className="text-teal-500 dark:text-teal-400">Kevin</span>.
-              I'm a developer.
+              I'm a web developer.
             </h1>
             <div className="order-1 md:order-2">
               <Image
@@ -53,15 +53,15 @@ export default function Home({ recentArticles }) {
         </div>
         <hr className="hr"></hr>
         <div>
-          <h2>I love to share my knowledge through writing.</h2>
-          <p>Check out a few of my most recent publishings.</p>
+          <h2>Here are some of my projects</h2>
+          <p>Check out a few of my most recent works.</p>
           <ArticleList articles={recentArticles} />
           <div className="my-16">
             <Button
               buttonType={ButtonType.PRIMARY}
               onButtonClick={() => push('/blog')}
             >
-              See all articles
+              See all projects
             </Button>
           </div>
           <div className="mt-16">
