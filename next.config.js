@@ -28,5 +28,8 @@ module.exports = {
       'res.craft.do',
       'res.cloudinary.com'
     ]
+  },
+  experimental: {
+    newNextLinkBehavior: false,
   }
 };
