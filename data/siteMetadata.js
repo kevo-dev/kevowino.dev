@@ -1,12 +1,12 @@
 const siteMetadata = {
-  title: 'Kev Owino – full-stack engineer, writer.',
+  title: 'Kev Owino – full-stack engineer, Data Analyst',
   author: 'Kev Owino',
   headerTitle: "Kev's Portfolio",
   description:
     "I'm Kev. I'm a junor front-end developer and blogger . Welcome to my website. I'm glad you're here!",
   language: 'en-us',
   siteUrl: '#',
-  siteRepo: 'https://github.com/bro-codez/kevowino.dev',
+  siteRepo: 'https://github.com/kevo-dev/kevowino.dev',
   //   siteLogo: "/static/images/bundle_logo.svg",
   avatarImage:
     'https://res.cloudinary.com/dq6a7lv2s/image/upload/v1674404146/WcPmyWNE_400x400_frwbkc.jpg',
