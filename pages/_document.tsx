@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import { Head, Html, Main, NextScript } from 'next/document';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Document(props) {
   return (
@@ -22,6 +23,7 @@ export default function Document(props) {
       </Head>
       <body className="prose-headings:font-headings">
       <Analytics />
+      <SpeedInsights />
         <Main />
         <NextScript />
       </body>
