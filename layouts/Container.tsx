@@ -140,6 +140,7 @@ export function Container(props) {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.imageUrl} />
+        <meta name="google-site-verification" content="c4nPe2NsQIXMz3Is5ELKP0fIo33kby1KtXWFJY3ULQ4" />
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
