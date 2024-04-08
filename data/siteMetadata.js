@@ -3,9 +3,9 @@ const siteMetadata = {
   author: 'Kev Owino',
   headerTitle: "Kev's Portfolio",
   description:
-    "I'm Kev. I'm a junor front-end developer and blogger . Welcome to my website. I'm glad you're here!",
+    "I'm Kev. I'm a junior front-end developer and blogger . Welcome to my website. I'm glad you're here!",
   language: 'en-us',
-  siteUrl: '#',
+  siteUrl: 'https://kevowino-dev.vercel.app/',
   siteRepo: 'https://github.com/kevo-dev/kevowino.dev',
   //   siteLogo: "/static/images/bundle_logo.svg",
   avatarImage:
@@ -19,14 +19,14 @@ const siteMetadata = {
   codepen: 'https://codepen.io/kevOWINO',
   linkedin: 'https://www.linkedin.com/in/kevin-owino-55b095262/',
   newsletter: '/#',
-  resume: '/static/braydoncoyer_resume.pdf',
+  resume: '',
   snippets:
     'https://www.notion.so/9f35162787e0448094188b66304cf9f6?v=1b9c4e146edf46148fe7b1c5346cbea4',
-  carbonCode: 'CESDE27N',
-  carbonPlacement: 'braydoncoyerdev',
+  carbonCode: '',
+  carbonPlacement: '',
   locale: 'en-US',
   analytics: {
-    plausibleDataDomain: 'braydoncoyer.dev'
+    plausibleDataDomain: ''
   }
 };
 
