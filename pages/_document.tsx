@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import { Head, Html, Main, NextScript } from 'next/document';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Document(props) {
   return (
@@ -20,6 +21,7 @@ export default function Document(props) {
         {/* <script src="//www.ezojs.com/ezoic/sa.min.js" defer></script> */}
       </Head>
       <body className="prose-headings:font-headings">
+      <Analytics />
         <Main />
         <NextScript />
       </body>
