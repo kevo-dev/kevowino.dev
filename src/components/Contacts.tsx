@@ -45,7 +45,7 @@ const contacts = [
       />
     ),
     ariaLabel: 'Gmail link',
-    link: 'mailto:seitasanov.yahub@gmail.com',
+    link: 'mailto:kevowino2016@gmail.com',
   },
   {
     icon: (
@@ -59,6 +59,6 @@ const contacts = [
       />
     ),
     ariaLabel: 'Telegram link',
-    link: 'https://telegram.me/r34son',
+    link: 'https://telegram.me/#',
   },
 ];
