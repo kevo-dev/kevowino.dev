@@ -1,0 +1,7 @@
+spec:
+  containers:
+    - image: ${image_url}
+      name: app
+      env:
+        - name: URL
+          value: ${url}

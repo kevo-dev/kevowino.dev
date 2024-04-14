@@ -1,53 +1,106 @@
-# Specifies intentionally untracked files to ignore when using Git
-# http://git-scm.com/docs/gitignore
-.next
-*~
-*.sw[mnpcod]
-.tmp
-*.tmp
-*.tmp.*
-*.sublime-project
-*.sublime-workspace
-.DS_Store
-Thumbs.db
-UserInterfaceState.xcuserstate
-$RECYCLE.BIN/
-config.xml
-tsconfig.tsbuildinfo
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-*.log
-log.txt
-npm-debug.log*
+# dependencies
+node_modules
+/.pnp
+.pnp.js
 
-# lock files
-yarn.lock
-package-lock.json
-
-public/sitemap.xml
-public/feed.xml
-/.cache/
-/.ionic
-/.sass-cache
-/.sourcemaps
-/.versions
-/.vscode
+# testing
 /coverage
-/dist
-.env.local
-.env.development
-.env.local
-/public
-.netlify
-/node_modules
-/platforms
-/plugins
-/www
-/.next/*
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
 .vercel
 
-# IDE specific
-.idea/
-.vscode/
-*.sw*
+# caches
+.eslintcache
+.stylelintcache
 
-/resources
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Lighthouse CI
+.lighthouseci
+
+# next-pwa
+/public/precache.*.*.js
+/public/sw.js
+/public/workbox-*.js
+/public/worker-*.js
+/public/fallback-*.js
+/public/precache.*.*.js.map
+/public/sw.js.map
+/public/workbox-*.js.map
+/public/worker-*.js.map
+/public/fallback-*.js
+
+# Storybook
+storybook-static
+build-storybook.log
+
+# Terraform
+
+# Terraform lockfile
+.terraform.lock.hcl
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data, such as
+# password, private keys, and other secrets. These should not be part of version 
+# control as they are data points which are potentially sensitive and subject 
+# to change depending on the environment.
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include override files you do wish to add to version control using negated pattern
+# !example_override.tf
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# example: *tfplan*
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+# Sentry Config File
+.sentryclirc

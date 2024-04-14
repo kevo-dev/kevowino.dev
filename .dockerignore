@@ -1,0 +1,25 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.nvmrc
+.next
+.git
+.gitignore
+.prettierignore
+.github
+.vscode
+*.md
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+playwright.config.ts
+
+/tests
+
+# Jest
+jest.*

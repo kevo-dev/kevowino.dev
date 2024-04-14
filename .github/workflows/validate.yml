@@ -1,0 +1,63 @@
+name: Validate
+
+on:
+  push:
+    branches: ['master']
+  pull_request:
+    branches: ['master']
+
+env:
+  SKIP_SIMPLE_GIT_HOOKS: 1
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d # v3.0.0
+
+      - name: Install Node.js
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Validate current commit (last commit) with commitlint
+        if: github.event_name == 'push'
+        run: |
+          pnpm exec commitlint \
+            --from ${{ github.event.before }} \
+            --to ${{ github.event.after }} \
+            --verbose
+
+      - name: Validate PR commits with commitlint
+        if: github.event_name == 'pull_request'
+        run: |
+          pnpm exec commitlint \
+            --from ${{ github.event.pull_request.base.sha }} \
+            --to ${{ github.event.pull_request.head.sha }} \
+            --verbose
+
+      - name: Format
+        run: pnpm run format:check
+
+      - name: Run the tests
+        run: pnpm test:unit

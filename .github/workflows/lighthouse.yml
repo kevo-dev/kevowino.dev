@@ -1,0 +1,83 @@
+name: Lighthouse CI
+
+on:
+  deployment_status:
+
+env:
+  SKIP_SIMPLE_GIT_HOOKS: 1
+  LHCI_COLLECT__URL: ${{ github.event.deployment_status.environment_url }}/en
+  LHCI_UPLOAD__TARGET: temporary-public-storage
+
+jobs:
+  lhci-mobile:
+    if: |
+      github.actor != 'dependabot[bot]' && github.event.deployment_status.state == 'success'
+      && github.event.deployment_status.environment_url
+      && (github.event.deployment_status.environment == 'development' || github.event.deployment_status.environment == 'production')
+    name: Lighthouse mobile audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d # v3.0.0
+
+      - name: Install Node.js
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Chrome
+        id: install-chrome
+        uses: browser-actions/setup-chrome@97349de5c98094d4fc9412f31c524d7697115ad8 # v1.5.0
+
+      - run: pnpm lhci:mobile
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          CHROME_PATH: ${{ steps.install-chrome.outputs.chrome-path }}
+
+  lhci-desktop:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
+    name: Lighthouse desktop audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d # v3.0.0
+
+      - name: Install Node.js
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Chrome
+        id: install-chrome
+        uses: browser-actions/setup-chrome@97349de5c98094d4fc9412f31c524d7697115ad8 # v1.5.0
+
+      - run: pnpm lhci:desktop
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          CHROME_PATH: ${{ steps.install-chrome.outputs.chrome-path }}

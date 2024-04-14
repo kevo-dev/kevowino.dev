@@ -1,0 +1,30 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "i18n-ally.localesPaths": ["src/messages"],
+  "i18n-ally.keystyle": "nested",
+  "npm.packageManager": "pnpm",
+  "css.validate": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[terraform][terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.formatAll.terraform": "explicit"
+    }
+  },
+  "terraform.experimentalFeatures.validateOnSave": true,
+  "terraform.experimentalFeatures.prefillRequiredFields": true,
+  "editor.suggest.preview": true,
+  "git.allowForcePush": true,
+  "git.allowNoVerifyCommit": true,
+  "git.autofetch": true,
+  "git.autoStash": true,
+  "git.defaultBranchName": "master",
+  "git.enableSmartCommit": true,
+  "git.fetchOnPull": false,
+  "git.rebaseWhenSync": true,
+  "git.terminalGitEditor": true
+}
