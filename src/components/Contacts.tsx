@@ -31,7 +31,7 @@ const contacts = [
       />
     ),
     ariaLabel: 'Linkedin link',
-    link: 'https://www.linkedin.com/in/r34s0n/',
+    link: 'https://www.linkedin.com/in/kevowino/',
   },
   {
     icon: (
