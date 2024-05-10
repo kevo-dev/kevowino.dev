@@ -4,7 +4,11 @@
     "description": "Skilled developer with years of experience in JavaScript, HTML/CSS, Python, TypeScript, SQL, and Git. Building innovative and user-friendly web applications. Let's discuss your project!",
     "name": "Kevin Owino",
     "applicationName": "Kevin Owino Profile",
-    "keywords": "Kevin Owino Developer Nairobi, Kevin Owino Web Developer Nairobi/Kisumu, Full-Stack Developer, Web Application Development, JavaScript, HTML, CSS, Python, SQL, Innovative, Git, Back-End Development, Front-End Development, Freelance Developer "
+    "keywords": "Kevin Owino Developer Nairobi, Kevin Owino Web Developer Nairobi/Kisumu, Full-Stack Developer, Web Application Development, JavaScript, HTML, CSS, Python, SQL, Innovative, Git, Back-End Development, Front-End Development, Freelance Developer ",
+    "verification": {
+      "google": "c4nPe2NsQIXMz3Is5ELKP0fIo33kby1KtXWFJY3ULQ4"
+      
+    }
   },
   "header": {
     "title": "Profile | Kevin Owino",
